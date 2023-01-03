@@ -1,10 +1,8 @@
 .input {
-    display: flex;
-    width: 95%;
-    position: relative;
-    align-items: center;
-  }
-  
+  display: flex;
+  width: 95%;
+  position: relative;
+  align-items: center;
   .input__box {
     width: 100%;
     border-radius: 50px;
@@ -14,39 +12,103 @@
     transition: 0.2s;
     box-shadow: inset 0 0 5px black;
     &:focus {
-        box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
-        outline: none;
-      }
+      box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+      outline: none;
+    }
   }
-  
-  
-  
-  .input_submit {
-    position:absolute;
-    width: 50px;
-    height: 50px;
-    margin: 12px;
-    border-radius: 50px;
-    right: 0px;
+}
+.input_submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+  &:hover {
+    background-color: #388ae2;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
+}
+.container {
+  width: 95%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  .todos {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 47.5%;
+  padding: 15px;
+  background-color: rgb(50, 195, 205);
+}
+.dragactive {
+  background-color: rgb(0, 221, 236);
+}
+
+.dragcomplete {
+  background-color: rgb(255, 38, 0);
+}
+
+.remove {
+  background-color: rgb(235, 103, 80);
+}
+}
+
+
+
+
+
+.todos__heading {
+  font-size: 30px;
+  /* text-align: center; */
+  color: white;
+}
+
+.todos__single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+  .todos__single--text {
+    flex: 1;
+    padding: 5px;
     border: none;
-    font-size: 15px;
-    background-color: #2f74c0;
-    color: white;
-    transition: 0.2s all;
-    box-shadow: 0 0 10px black;
-    &:hover {
-        background-color: #388ae2;
-      }
-      
-    &:active {
-        transform: scale(0.8);
-        box-shadow: 0 0 5px black;
-      }
+    font-size: 20px;
   }
-  .container {
-    width: 95%;
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-between;
-    align-items: flex-start;
+  .icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
   }
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+.todos__single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
+}
+
+
+
+.todos__single--text:focus {
+  outline: none;
+}
+
+
